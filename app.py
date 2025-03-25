@@ -4,8 +4,39 @@ import PyPDF2
 import docx
 import os
 
-# Set page configuration
+# Set page configuration with blue-black theme
 st.set_page_config(page_title="AI Document Translator", page_icon="🌐", layout="wide")
+
+# Custom CSS for blue-black theme
+st.markdown("""
+<style>
+.stApp {
+    background-color: #0D1B2A;
+    color: #E0E1DD;
+}
+.stTextInput > div > div > input {
+    background-color: #1F2041;
+    color: #E0E1DD;
+    border: 1px solid #415A77;
+}
+.stButton > button {
+    background-color: #415A77;
+    color: #E0E1DD;
+    border: none;
+}
+.stButton > button:hover {
+    background-color: #4A6D7C;
+}
+.stSidebar {
+    background-color: #1F2041;
+}
+.stTextArea > div > div > textarea {
+    background-color: #1F2041;
+    color: #E0E1DD;
+    border: 1px solid #415A77;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # List of supported languages
 LANGUAGES = [
